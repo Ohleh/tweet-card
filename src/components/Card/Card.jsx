@@ -1,6 +1,6 @@
 // https://www.figma.com/file/iTdOshbZvvsDMlQz8Nh4X9/Test-(Copy)?node-id=0%3A1&t=66u5ZoHFd5WRroHu-0
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Button,
   Text,
@@ -19,21 +19,29 @@ import avatar from "../../images/avatar-m@2x.png";
 
 const mainBase = {
   folowers: 100500,
+  follow: false,
 };
 
 const Card = () => {
-  const [follow, setfollow] = useState(false);
-  const [count, setCount] = useState(mainBase.folowers);
+  const [follow, setfollow] = useState(() => {
+    return window.localStorage.getItem("follow") || mainBase.follow;
+  });
+  const [count, setCount] = useState(() => {
+    return (
+      JSON.parse(window.localStorage.getItem("count")) || mainBase.folowers
+    );
+  });
 
-  // useEffect(() => {
-  //   setCount(JSON.parse(window.localStorage.getItem("count")));
-  // }, []);
-
-  // useEffect(() => {
-  //   window.localStorage.setItem("count", count);
-  // }, [count]);
+  useEffect(() => {
+    window.localStorage.setItem("count", count);
+    window.localStorage.setItem("follow", follow);
+  }, [count]);
 
   const HandleButton = () => {
+    if (count > mainBase.folowers) {
+      setfollow(true);
+      setCount(count - 1);
+    }
     if (!follow) {
       setfollow(true);
       setCount(count + 1);
