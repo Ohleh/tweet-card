@@ -25,6 +25,14 @@ const Card = () => {
   const [follow, setfollow] = useState(false);
   const [count, setCount] = useState(mainBase.folowers);
 
+  useEffect(() => {
+    setCount(JSON.parse(window.localStorage.getItem("count")));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("count", count);
+  }, [count]);
+
   const HandleButton = () => {
     if (!follow) {
       setfollow(true);
