@@ -1,6 +1,6 @@
 // https://www.figma.com/file/iTdOshbZvvsDMlQz8Nh4X9/Test-(Copy)?node-id=0%3A1&t=66u5ZoHFd5WRroHu-0
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Button,
   Text,
@@ -25,13 +25,13 @@ const Card = () => {
   const [follow, setfollow] = useState(false);
   const [count, setCount] = useState(mainBase.folowers);
 
-  useEffect(() => {
-    setCount(JSON.parse(window.localStorage.getItem("count")));
-  }, []);
+  // useEffect(() => {
+  //   setCount(JSON.parse(window.localStorage.getItem("count")));
+  // }, []);
 
-  useEffect(() => {
-    window.localStorage.setItem("count", count);
-  }, [count]);
+  // useEffect(() => {
+  //   window.localStorage.setItem("count", count);
+  // }, [count]);
 
   const HandleButton = () => {
     if (!follow) {
