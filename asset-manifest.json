@@ -1,7 +1,7 @@
 {
   "main.css": "/tweet-card/static/css/main.4f7750db.chunk.css",
-  "main.js": "/tweet-card/static/js/main.d47dcb94.chunk.js",
-  "main.js.map": "/tweet-card/static/js/main.d47dcb94.chunk.js.map",
+  "main.js": "/tweet-card/static/js/main.dbffa8a4.chunk.js",
+  "main.js.map": "/tweet-card/static/js/main.dbffa8a4.chunk.js.map",
   "static/js/1.3bc8ac50.chunk.js": "/tweet-card/static/js/1.3bc8ac50.chunk.js",
   "static/js/1.3bc8ac50.chunk.js.map": "/tweet-card/static/js/1.3bc8ac50.chunk.js.map",
   "static/js/2.04bdd12f.chunk.js": "/tweet-card/static/js/2.04bdd12f.chunk.js",
@@ -12,6 +12,6 @@
   "static/media/avatar-m@2x.png": "/tweet-card/static/media/avatar-m@2x.1f2109d8.png",
   "static/css/main.4f7750db.chunk.css.map": "/tweet-card/static/css/main.4f7750db.chunk.css.map",
   "index.html": "/tweet-card/index.html",
-  "precache-manifest.97b53925bb502b2babbc0f0e2d42066f.js": "/tweet-card/precache-manifest.97b53925bb502b2babbc0f0e2d42066f.js",
+  "precache-manifest.4a6978168c36c9414e3a9b4618937451.js": "/tweet-card/precache-manifest.4a6978168c36c9414e3a9b4618937451.js",
   "service-worker.js": "/tweet-card/service-worker.js"
 }
