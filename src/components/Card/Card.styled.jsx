@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
+export const MainContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+`;
+
 export const Container = styled.div`
   position: absolute;
   width: 380px;
   height: 460px;
-  margin: 50px;
-  //   left: 435px;
-  //   top: 168px;
 
   background: linear-gradient(
     114.99deg,

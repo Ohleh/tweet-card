@@ -19,19 +19,17 @@ import chat from "../../images/chat-m@2x.png";
 import line from "../../images/line-m@2x.png";
 import avatar from "../../images/avatar-m@2x.png";
 
-const mainBase = {
+const initial = {
   folowers: 100500,
   follow: false,
 };
 
 const Card = () => {
   const [follow, setfollow] = useState(() => {
-    return window.localStorage.getItem("follow") || mainBase.follow;
+    return JSON.parse(window.localStorage.getItem("follow")) || initial.follow;
   });
   const [count, setCount] = useState(() => {
-    return (
-      JSON.parse(window.localStorage.getItem("count")) || mainBase.folowers
-    );
+    return JSON.parse(window.localStorage.getItem("count")) || initial.folowers;
   });
 
   useEffect(() => {
@@ -39,20 +37,16 @@ const Card = () => {
     window.localStorage.setItem("follow", follow);
   }, [count]);
 
-  const HandleButton = () => {
-    if (count > mainBase.folowers) {
-      setfollow(true);
-      setCount(count - 1);
-    }
-    if (!follow) {
-      setfollow(true);
+  function HandleButton() {
+    if (count === initial.folowers) {
       setCount(count + 1);
+      setfollow(true);
     }
-    if (follow) {
-      setfollow(false);
+    if (count > initial.folowers) {
       setCount(count - 1);
+      setfollow(false);
     }
-  };
+  }
 
   function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
