@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/tweet-card/static/media/avatar-m@2x.1f2109d8.png"
   },
   {
-    "revision": "677450307a89c6380bd8880c5c4bf231",
+    "revision": "ba7bc8802f43142daecddcb076d9efec",
     "url": "/tweet-card/index.html"
   }
 ];
